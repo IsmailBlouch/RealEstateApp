@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PropertyCardComponent } from './property/property-card/property-card.component';
 import { PropertyListComponent } from './property/property-list/property-list.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     CommonModule, 
     RouterOutlet, 
-    PropertyCardComponent, 
-    PropertyListComponent, 
-    NavBarComponent, 
+    HttpClientModule,
+    PropertyCardComponent,
+    PropertyListComponent,
+    NavbarComponent
   ],
+  providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
